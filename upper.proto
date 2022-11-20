@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package upper;
+
+option go_package = "./upper";
+
+message Message {
+    string body = 1;
+}
+
+service UpperService {
+    rpc ToUpper(Message) returns (Message) {}
+}
+
